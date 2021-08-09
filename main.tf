@@ -154,7 +154,7 @@ resource "aws_security_group" "mtc_sg" {
       to_port   = ingress.value.to
       protocol  = ingress.value.protocol
       #cidr_blocks = ingress.value.cidr_blocks
-      cidr_blocks = var.access_ip
+      cidr_blocks = [var.access_ip]
     }
   }
 
